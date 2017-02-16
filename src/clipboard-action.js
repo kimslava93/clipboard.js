@@ -18,10 +18,10 @@ class ClipboardAction {
      * @param {Object} options
      */
     resolveOptions(options = {}) {
-        this.action  = options.action;
+        this.action = options.action;
         this.emitter = options.emitter;
-        this.target  = options.target;
-        this.text    = options.text;
+        this.target = options.target;
+        this.text = options.text;
         this.trigger = options.trigger;
 
         this.selectedText = '';
@@ -61,7 +61,8 @@ class ClipboardAction {
         this.fakeElem.style.margin = '0';
         // Move element out of screen horizontally
         this.fakeElem.style.position = 'absolute';
-        this.fakeElem.style[ isRTL ? 'right' : 'left' ] = '-9999px';
+        this.fakeElem.style[isRTL ? 'right' : 'left'] = '-9999px';
+        this.fakeElem.style.width = '50%';
         // Move element to the same position vertically
         let yPosition = window.pageYOffset || document.documentElement.scrollTop;
         this.fakeElem.style.top = yPosition + 'px';
